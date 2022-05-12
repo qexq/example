@@ -1,0 +1,296 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+a{text-decoration: none; color: #333;}
+li{list-style: none;}
+*{margin: 0;padding: 0;}
+
+body{
+    background: url(img/bg-main.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+header nav{width: 40%;}
+header nav ul{display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;}
+header nav ul li{}
+header nav ul li a{color: #fff;
+font-weight: 600;}
+
+header .search i{
+    color: #fff;
+    font-size: 25px;
+}
+
+.slick .slick-slide{
+    position: relative;
+}
+.slick .slick-slide .left{
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+}
+.slick .slick-slide .left img{
+    padding-top: 20%;
+    transform: translate(-200%, 0);
+    opacity: 0;
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .left img{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.slick .slick-slide .left .jordon{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    z-index: -1; /*이 상황에서 조던이 동생이고 이미지가 형인데 앱솔루트로 위로 가있으니까 -1 넣어야 조던글자가 뒤로 감*/
+    text-align: right;
+    transform: translate(100%, 0);
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .left .jordon{
+    transform: translate(0, 0);
+}
+.slick .slick-slide .left .jordon h2{
+    font-size: 12vw;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    text-align: left;
+}
+.slick .slick-slide .left .jordon span{
+    font-size: 30px;
+    color: #fff;
+}
+
+
+.slick .right{
+    float: right;
+    width: 40%;
+    box-sizing: border-box;
+    padding-top: 15%;
+    color: #fff;
+}
+.slick .slick-slide img{
+    width: 100%;
+}
+.slick .right .right-top h3{
+    display: inline-block;
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.slick .slick-slide .right .right-top h3{
+    padding-top: 20%;
+    transform: translate(0, -200%);
+    opacity: 0;
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .right .right-top h3{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+.slick .right .right-top .star i{
+    color: #ffde00;
+    margin-right: 6px;
+}
+
+.slick .right .right-top .star i:last-child{
+    color: #fff;
+}
+
+
+.slick .slick-slide .right .right-top .star i{
+    padding-top: 20%;
+    transform: translate(300%, 0);
+    opacity: 0;
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .right .right-top .star i{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+.slick .right .right-top h4{
+    font-size: 30px;
+    padding-top: 20px;
+
+}
+
+.slick .slick-slide .right .right-top h4{
+    padding-top: 0%;
+    transform: translate(300%, 0);
+    opacity: 0;
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .right .right-top h4{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+
+
+.slick .right .right-m{
+  /*   line-height은 기본값이 1~1.3 */
+    line-height: 2;
+}
+
+.slick .right .right-m li{
+    list-style: circle;
+}
+
+
+.slick .slick-slide .right .right-m{
+    padding-top: 0%;
+    transform: translate(0, 200%);
+    opacity: 0;
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .right .right-m{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+
+.slick .right .right-b{
+    padding-top: 20px;
+}
+
+
+.slick .right .right-b .size{
+    background: #ffde00;
+    border: none;
+    font-weight: 700;
+    color: #000;
+    font-size: 18px;
+    padding: 2px;
+}
+
+.slick .slick-slide .right .right-b .size{
+    padding-top: 0;
+    transform: translate(-200%, 0);
+    opacity: 0;
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .right .right-b .size{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+.slick .right .right-b .cart{
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.slick .slick-slide .right .right-b .cart{
+    padding-top: 1%;
+    transform: translate(0, 200%);
+    opacity: 0;
+    transition: 1.5s;
+}
+.slick .slick-slide.slick-active .right .right-b .cart{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+
+
+.slick .right .right-b span{
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-block;
+    transform: translate(500%, 0);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.slick .slick-slide.slick-active .right .right-b span{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+/* 
+영역이 완전히 사라짐, 애니메이션이 안 됨
+display:none <-> display:block
+
+영역을 유지함, 애니메이션이 안 됨
+visibility:hidden <-> visibility:visible
+
+영역 유지, 애니메이션 적용 됨
+opacity:0 <-> opacity:1
+*/
+
+
+
+
+.slick .slick-prev{
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    visibility: hidden; 
+}
+
+.slick .slick-prev::after{
+    content: '\f053'; /*폰트어썸 화살표*/
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 60px;
+    color: #fff;
+  /*   text-shadow: 칼라 x축 y축 blur; */
+    text-shadow: #000 0px 0px 6px;
+}
+
+.slick .slick-next{
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    visibility: hidden; 
+}
+
+.slick .slick-next::after{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: #000 0px 0px 6px;
+}
+
+
+

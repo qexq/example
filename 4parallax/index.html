@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <!-- https://matthew.wagerfield.com/parallax/ -->
+    <div class="container">
+        <div id="scene">
+            <div data-depth="-0.3">
+                <img src="img/back.png">
+            </div>
+            <div data-depth="-0.2">
+                <img src="img/last.png">
+            </div>
+            <div data-depth="-0.4">
+                <img src="img/next.png">
+            </div>
+            <div data-depth="-0.5">
+                <img src="img/hip.png">
+            </div>
+            <div data-depth="-0.3">
+                <img src="img/circle1.png">
+            </div>
+            <div data-depth="-0.3">
+                <img src="img/circle2.png">
+            </div>
+            <div data-depth="-0.3">
+                <img src="img/circle3.png">
+            </div>
+          </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+        </script>
+</body>
+</html>

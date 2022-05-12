@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section style="height:100vh; background-color: #ccc;"></section>
+    <section class="main">
+        <div class="cantentwrap">
+            <img class="img0" src="img/fin0.jpg" alt="이미지0">
+            <img class="img1" src="img/fin1.jpg" alt="이미지1">
+            <img class="img2" src="img/fin2.jpg" alt="이미지2">
+            <img class="img3" src="img/fin3.jpg" alt="이미지3">
+        </div><!--//cantentwrap-->
+        <div class="cantentwrap">
+            <img class="img0" src="img/fin2.jpg" alt="이미지2">
+            <img class="img1" src="img/fin3.jpg" alt="이미지3">
+            <img class="img2" src="img/fin0.jpg" alt="이미지0">
+            <img class="img3" src="img/fin1.jpg" alt="이미지1">
+        </div><!--//cantentwrap-->
+        <div class="cantentwrap">
+            <img class="img0" src="img/fin3.jpg" alt="이미지3">
+            <img class="img1" src="img/fin1.jpg" alt="이미지1">
+            <img class="img2" src="img/fin2.jpg" alt="이미지2">
+            <img class="img3" src="img/fin0.jpg" alt="이미지0">
+        </div><!--//cantentwrap-->
+        
+
+
+        <div class="textWrap">
+            <h2 class="active">bbb</h2>
+        </div>
+
+        <div class="buttonWrap">
+            <button class="btn1">PREV</button>
+            <button class="btn2">NEXT</button>
+        </div>
+    </section>
+    <section style="height:100vh; background-color: #cc4;"></section>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        var button = $('button');
+        var cantentwrap = $('.cantentwrap');
+        var imgArr = $('img');
+        var title = $('h2');
+        var pageNum = 0;
+        var totalNum = 0;
+
+        totalNum = cantentwrap.length;//3
+        //console.log(totalNum);
+
+        imgArr.removeClass('active');
+        cantentwrap.eq(pageNum).find('img').addClass('active');
+        title.text("PAGE : " + (pageNum + 1) +" / " + totalNum);
+
+
+        $('.btn1').click(function(){
+            if(pageNum>0){
+                page--;//1씩 빼기
+            }else{
+                pageNum = totalNum - 1;
+            }
+            imgArr.removeClass('active');
+            cantentwrap.eq(pageNum).find('img').addClass('active');
+            title.text("PAGE : " + (pageNum + 1) +" / " + totalNum);
+        });
+        
+
+
+
+
+
+
+
+
+
+        $('.btn2').click(function(){
+            if(pageNum < totalNum - 1){
+                pageNum++; //1씩 더하다
+            }else{
+                pageNum = 0;
+            }
+            imgArr.removeClass('active');
+            cantentwrap.eq(pageNum).find('img').addClass('active');
+            title.text("PAGE : " + (pageNum + 1) +" / " + totalNum);
+        });
+    </script>
+
+</body>
+</html>
